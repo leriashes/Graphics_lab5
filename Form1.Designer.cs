@@ -29,6 +29,7 @@ namespace Graphics_lab5
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,9 +40,11 @@ namespace Graphics_lab5
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
 			this.pictureBox1.Location = new System.Drawing.Point(12, 42);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(794, 680);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			// 
@@ -61,10 +64,12 @@ namespace Graphics_lab5
 			this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
 			this.openFileToolStripMenuItem.Size = new System.Drawing.Size(167, 34);
 			this.openFileToolStripMenuItem.Text = "Открыть файл";
+			this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
 			// 
 			// openFileDialog1
 			// 
-			this.openFileDialog1.FileName = "openFileDialog1";
+			this.openFileDialog1.Filter = "\"Image Files|*.jpg;*.jpeg;*.png;*.gif;*.tif;...\"";
+			this.openFileDialog1.InitialDirectory = "C:\\Users\\valer\\source\\repos\\Graphics_lab5";
 			// 
 			// Form1
 			// 
